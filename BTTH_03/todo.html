@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý công việc</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="box">
+        <a href="index.html">Về trang chủ</a>
+        <h1>Quản lý công việc cá nhân</h1>
+
+        <button id="btnOpenTask">Thêm công việc</button>
+
+        <p id="taskMessage"></p>
+
+        <div class="info">
+            <span>Tổng: <b id="totalTask">0</b></span>
+            <span>Đã xong: <b id="doneTask">0</b></span>
+            <span>Chưa xong: <b id="doingTask">0</b></span>
+        </div>
+
+        <div id="taskList"></div>
+    </div>
+
+    <div id="taskModal" class="modal">
+        <div class="form-box">
+            <h2 id="taskFormTitle">Thêm công việc</h2>
+
+            <form id="taskForm">
+                <label>Tiêu đề</label>
+                <input type="text" id="taskTitle">
+
+                <label>Mô tả</label>
+                <textarea id="taskDesc"></textarea>
+
+                <label>Hạn hoàn thành</label>
+                <input type="date" id="taskDate">
+
+                <label>Mức ưu tiên</label>
+                <select id="taskPriority">
+                    <option value="Thấp">Thấp</option>
+                    <option value="Trung bình">Trung bình</option>
+                    <option value="Cao">Cao</option>
+                </select>
+
+                <div class="buttons">
+                    <button type="submit">Lưu</button>
+                    <button type="button" id="btnCloseTask">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/todo.js"></script>
+</body>
+</html>

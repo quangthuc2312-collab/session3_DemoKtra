@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="box">
+        <a href="index.html">Về trang chủ</a>
+        <h1>Quản lý sinh viên</h1>
+
+        <button id="btnOpen">Thêm sinh viên</button>
+
+        <p id="message"></p>
+
+        <div class="info">
+            <span>Tổng số sinh viên: <b id="total">0</b></span>
+            <span>Điểm trung bình lớp: <b id="avg">0</b></span>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Mã SV</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Lớp</th>
+                    <th>Điểm</th>
+                    <th>Email</th>
+                    <th>Chức năng</th>
+                </tr>
+            </thead>
+            <tbody id="studentList"></tbody>
+        </table>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="form-box">
+            <h2 id="formTitle">Thêm sinh viên</h2>
+
+            <form id="studentForm">
+                <label>Mã sinh viên</label>
+                <input type="text" id="code">
+
+                <label>Họ và tên</label>
+                <input type="text" id="name">
+
+                <label>Ngày sinh</label>
+                <input type="date" id="birthday">
+
+                <label>Lớp học</label>
+                <input type="text" id="className">
+
+                <label>Điểm trung bình</label>
+                <input type="number" id="score" step="0.1">
+
+                <label>Email</label>
+                <input type="email" id="email">
+
+                <div class="buttons">
+                    <button type="submit">Lưu</button>
+                    <button type="button" id="btnClose">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/student.js"></script>
+</body>
+</html>
